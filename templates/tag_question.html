@@ -1,0 +1,67 @@
+{% extends "public/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="col-9 pr-5 mt-2">
+        <div class="headings">
+            <h2>Вопросы по тегу:</h2>
+            <h4><a href="#">python framework Django</a></h4>
+        </div>
+        <div class="question-card container bg-light shadow-sm">
+            <div class="row">
+                <div class="col-2 left-side">
+                    <img src="{% static "img/user1.jpg" %}" alt="Avatar" class="rounded">
+                    <button class="like__btn">
+                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                        <span id="count">2,238</span> Like
+                    </button>
+                </div>
+                <div class="col-10 right-side">
+                    <h3 class="question-title"><a href="question.html">Когда получим зачёт?</a></h3>
+                    <p class="question-description">Правда ли, что для получения зачёта достаточно выполнить первые 3 лабараторные работы?</p>
+                    <div class="answers-and-tags">
+                        <a href="question.html" class="link-to-answers">Комментарии(22)</a>
+                        <p class="question-tags">Теги:
+                            <a href="{% url 'tag_question' %}">Актуальные вопросы</a>
+                            <a href="{% url 'tag_question' %}">python framework Django</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="question-card container bg-light shadow-sm">
+            <div class="row">
+                <div class="col-2 left-side">
+                    <img src="{% static "img/user2.jpg" %}" alt="Avatar" class="rounded">
+                    <button class="like__btn">
+                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                        <span id="count">999,999</span> Like
+                    </button>
+                </div>
+                <div class="col-10 right-side">
+                    <h3 class="question-title"><a href="question.html">Как верстать на bootstrap'e?</a></h3>
+                    <p class="question-description">Подскажите пожалуйста, как использовать bootstrap для вёрстки?</p>
+                    <div class="answers-and-tags">
+                        <a href="question.html" class="link-to-answers">Комментарии(0)</a>
+                        <p class="question-tags">Теги:
+                            <a href="{% url 'tag_question' %}">Космические технологии</a>
+                            <a href="{% url 'tag_question' %}">Актуальные вопросы</a>
+                            <a href="{% url 'tag_question' %}">python framework Django</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% for question in questions %}
+            {% include "public/question_item.html" %}
+        {% endfor %}
+
+    </div>
+
+    <aside id="aside-info" class="col-3">
+        {% include 'public/right_menu.html' %}
+    </aside>
+    {% include 'public/paginator.html' %}
+
+{% endblock %}

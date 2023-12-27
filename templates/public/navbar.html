@@ -4,12 +4,12 @@
         <a id="main_label" class="navbar-brand" href="{% url 'index' %}">
             <div>
                 <!--                <h1 id="site-title">AskTheatre</h1>-->
-                <img id="user-pic" src="{% static "img/logotype.jpg" %}" alt="Logotype" class="rounded"/>
+                <img id="user-pic" src="{% static "img/logotype.png" %}" alt="Logotype" class="rounded"/>
             </div>
         </a>
 
         <div class="input-group" id="search-box">
-            <input class="form-control form-control-lg" type="search" placeholder="Enter"
+            <input class="form-control form-control-lg" type="search" placeholder="Поиск"
                    aria-label="Enter">
             <span class="input-group-append">
                 <button class="btn btn-lg btn-outline-secondary" type="button">
@@ -19,17 +19,17 @@
         </div>
 
         <div id="user-tools">
-            <a href="{% url 'new_question' %}" id="ask-question" class="btn btn-secondary">Ask Future</a>
+            <a href="{% url 'ask' %}" id="ask-question" class="btn btn-secondary">Задать вопрос</a>
 
             <div id="user-dropdown" class="dropdown">
                 <a class="dropdown-toggle" href="#" id="user-menu" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Jacque Fresco
+                    Tokushima Kuchiki
                 </a>
                 <div class="dropdown-menu" aria-labelledby="user-menu">
-                    <a class="dropdown-item" href="{% url 'index' %}">Profile</a>
-                    <a class="dropdown-item" href="{% url 'settings' %}">Settings</a>
-                    <a class="dropdown-item" href="{% url 'login' %}">Exit</a>
+                    <a class="dropdown-item" href="{% url 'index' %}">Профиль</a>
+                    <a class="dropdown-item" href="{% url 'settings' %}">Настройки</a>
+                    <a class="dropdown-item" href="{% url 'login' %}">Выход</a>
                 </div>
             </div>
 

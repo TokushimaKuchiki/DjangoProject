@@ -3,43 +3,43 @@
 {% block content %}
 
     <div class="col-9 pr-5">
-        <h2>Add question</h2>
+        <h2>Задать вопрос</h2>
         <div class="container bg-light shadow-sm mb-3">
             <form action="question.html" id="create-form" class="needs-validation" novalidate>
                 <div class="form-group row p-3">
-                    <label for="input-title" class="col-sm-3 col-form-label">Heading</label>
+                    <label for="input-title" class="col-sm-3 col-form-label">Заголовок</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="input-title"
-                               maxlength="100" placeholder="Title" required>
+                               maxlength="100" placeholder="Заголовок" required>
                         <div class="invalid-feedback">
-                            Enter this field
+                            Заполните поле
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group row p-3">
-                    <label for="input-content" class="col-sm-3 col-form-label">Questions body</label>
+                    <label for="input-content" class="col-sm-3 col-form-label">Вопрос</label>
                     <div class="col-sm-9">
                                 <textarea class="form-control" id="input-content"
-                                          placeholder="Text your question" maxlength="10000" required></textarea>
+                                          placeholder="Напишите свой вопрос" maxlength="10000" required></textarea>
                         <div class="invalid-feedback">
-                            Enter this field
+                            Заполните поле
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group row p-3">
-                    <label for="input-tags" class="col-sm-3 col-form-label">Tags</label>
+                    <label for="input-tags" class="col-sm-3 col-form-label">Теги</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="input-tags"
-                               placeholder="Tags of your question" required>
+                               placeholder="Введите теги" required>
                         <div class="invalid-feedback">
-                            Enter this field
+                            Заполните поле
                         </div>
                     </div>
                 </div>
 
-                <button id="create-button" class="btn btn-dark mb-2" type="submit">Submit</button>
+                <button id="create-button" class="btn btn-dark mb-2" type="submit">Отправить вопрос</button>
             </form>
         </div>
     </div>
